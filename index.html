@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-8<html lang="id" class="light">
+<html lang="id" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,10 +72,16 @@
                         </div>
                         
                         <div id="qris-actions-desktop" class="mt-4 space-y-2 hidden">
-                            <a id="download-btn-desktop" href="img/qris.jpeg" download="QRIS-Pembayaran.jpeg" class="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white text-xs font-semibold rounded-lg hover:bg-green-700 theme-transition">
-                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
-                                <span data-lang-key="download_qr">Unduh QR</span>
-                            </a>
+                            <div class="flex space-x-2">
+                                <a id="download-btn-desktop" href="img/qris.jpeg" download="QRIS-Pembayaran.jpeg" class="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white text-xs font-semibold rounded-lg hover:bg-green-700 theme-transition">
+                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    <span data-lang-key="download_qr">Unduh QR</span>
+                                </a>
+                                <button id="zoom-qris-btn-desktop" class="w-full flex items-center justify-center px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg hover:bg-blue-700 theme-transition">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                                    <span data-lang-key="zoom_qr">Perbesar</span>
+                                </button>
+                            </div>
                             <button id="hide-qris-btn-desktop" class="w-full flex items-center justify-center px-4 py-2 bg-gray-500 text-white text-xs font-semibold rounded-lg hover:bg-gray-600 theme-transition">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path><line x1="1" y1="1" x2="23" y2="23"></line></svg>
                                 <span data-lang-key="hide_qr_button">Sembunyikan QR</span>
@@ -118,7 +124,7 @@
                             <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
                                 <span id="dana-number" class="text-sm md:text-base font-mono text-gray-700 dark:text-gray-200">085826143635</span>
                                 <div class="flex items-center space-x-1">
-                                    <button class="show-payment-qr-btn p-1 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600" data-qr-src="img/danaqr.jpeg" data-payment-name="DANA">
+                                    <button class="show-payment-qr-btn p-1 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600" data-qr-src="https://placehold.co/512x512/FFFFFF/000000?text=DANA+QR" data-payment-name="DANA">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
                                     </button>
                                     <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="dana-number" data-lang-key="copy">SALIN</button>
@@ -137,7 +143,7 @@
                             <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
                                 <span id="gopay-number" class="text-sm md:text-base font-mono text-gray-700 dark:text-gray-200">085826143635</span>
                                 <div class="flex items-center space-x-1">
-                                    <button class="show-payment-qr-btn p-1 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600" data-qr-src="img/gopayqr.jpeg" data-payment-name="Gopay">
+                                    <button class="show-payment-qr-btn p-1 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600" data-qr-src="https://placehold.co/512x512/FFFFFF/000000?text=Gopay+QR" data-payment-name="Gopay">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
                                     </button>
                                     <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="gopay-number" data-lang-key="copy">SALIN</button>
@@ -215,7 +221,7 @@
 
     <!-- QRIS Modal for Mobile -->
     <div id="qris-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden theme-transition z-50">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-sm text-center relative">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-2xl text-center relative">
             <button id="close-modal-btn" class="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
@@ -231,7 +237,7 @@
 
     <!-- Generic Payment QR Modal -->
     <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden theme-transition z-50">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-sm text-center relative">
+        <div id="payment-modal-content" class="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-sm text-center relative">
             <button id="close-payment-modal-btn" class="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
             </button>
@@ -256,6 +262,7 @@
             const qrisImageDesktop = document.getElementById('qris-image-desktop');
             const qrisActionsDesktop = document.getElementById('qris-actions-desktop');
             const hideQrisBtnDesktop = document.getElementById('hide-qris-btn-desktop');
+            const zoomQrisBtnDesktop = document.getElementById('zoom-qris-btn-desktop');
             
             // Modal Elements
             const qrisModal = document.getElementById('qris-modal');
@@ -263,6 +270,7 @@
 
             // Generic Payment Modal Elements
             const paymentModal = document.getElementById('payment-modal');
+            const paymentModalContent = document.getElementById('payment-modal-content');
             const closePaymentModalBtn = document.getElementById('close-payment-modal-btn');
             const showPaymentQrBtns = document.querySelectorAll('.show-payment-qr-btn');
             const modalPaymentTitle = document.getElementById('modal-payment-title');
@@ -276,6 +284,7 @@
                     show_qr_button: "Tampilkan QR",
                     hide_qr_button: "Sembunyikan QR",
                     download_qr: "Unduh QR",
+                    zoom_qr: "Perbesar",
                     copy: "SALIN",
                     copied: "DISALIN!",
                     copyright: "© 2025 Thousand Hands. Hak Cipta Dilindungi.",
@@ -287,6 +296,7 @@
                     show_qr_button: "Show QR",
                     hide_qr_button: "Hide QR",
                     download_qr: "Download QR",
+                    zoom_qr: "Zoom",
                     copy: "COPY",
                     copied: "COPIED!",
                     copyright: "© 2025 Thousand Hands. All Rights Reserved.",
@@ -379,13 +389,7 @@
             };
 
             showQrisBtn.addEventListener('click', () => {
-                if (window.innerWidth < 1024) { // Mobile view
-                    qrisModal.classList.remove('hidden');
-                } else { // Desktop view
-                    qrisImageDesktop.classList.remove('hidden');
-                    qrisActionsDesktop.classList.remove('hidden');
-                    showQrisBtn.classList.add('hidden');
-                }
+                qrisModal.classList.remove('hidden');
             });
 
             hideQrisBtnDesktop.addEventListener('click', () => {
@@ -419,8 +423,23 @@
                     modalPaymentTitle.textContent = paymentName;
                     modalPaymentQr.src = qrSrc;
                     
+                    paymentModalContent.classList.remove('max-w-2xl');
+                    paymentModalContent.classList.add('max-w-sm');
+                    
                     paymentModal.classList.remove('hidden');
                 });
+            });
+            
+            // --- QRIS Zoom Logic ---
+            zoomQrisBtnDesktop.addEventListener('click', () => {
+                const qrSrc = qrisImageDesktop.src;
+                modalPaymentTitle.textContent = "QRIS";
+                modalPaymentQr.src = qrSrc;
+                
+                paymentModalContent.classList.remove('max-w-sm');
+                paymentModalContent.classList.add('max-w-2xl');
+                
+                paymentModal.classList.remove('hidden');
             });
 
 
