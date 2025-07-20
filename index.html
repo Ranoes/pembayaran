@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" class="light">
+8<html lang="id" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,6 @@
         /* Apply Inter font family */
         body {
             font-family: 'Inter', sans-serif;
-            /* overflow: hidden; has been removed to enable scrolling */
         }
         /* Custom transition for smoother theme changes */
         .theme-transition {
@@ -69,11 +68,11 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
                                 <span data-lang-key="show_qr_button">Tampilkan QR</span>
                             </button>
-                            <img id="qris-image-desktop" src="img\qris.jpeg" alt="Kode QRIS untuk Pembayaran" class="max-h-64 w-auto rounded-xl shadow-md hidden">
+                            <img id="qris-image-desktop" src="img/qris.jpeg" alt="Kode QRIS untuk Pembayaran" class="max-h-64 w-auto rounded-xl shadow-md hidden" onerror="this.onerror=null;this.src='https://placehold.co/400x560/FFFFFF/000000?text=QRIS+Not+Found';">
                         </div>
                         
                         <div id="qris-actions-desktop" class="mt-4 space-y-2 hidden">
-                            <a id="download-btn-desktop" href="img\qris.jpeg" download="QRIS-Pembayaran.png" class="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white text-xs font-semibold rounded-lg hover:bg-green-700 theme-transition">
+                            <a id="download-btn-desktop" href="img/qris.jpeg" download="QRIS-Pembayaran.jpeg" class="w-full flex items-center justify-center px-4 py-2 bg-green-600 text-white text-xs font-semibold rounded-lg hover:bg-green-700 theme-transition">
                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                                 <span data-lang-key="download_qr">Unduh QR</span>
                             </a>
@@ -91,7 +90,7 @@
                         <!-- BCA -->
                         <div class="p-3 border border-gray-200 dark:border-gray-700 rounded-xl theme-transition flex flex-col justify-between">
                             <div class="flex items-start space-x-3 mb-2">
-                                <img src="img\bca.png" alt="Logo BCA" class="w-12 h-12 object-contain">
+                                <img src="img/bca.png" alt="Logo BCA" class="w-12 h-12 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/48x48/0061A8/FFFFFF?text=BCA';">
                                 <div>
                                     <h2 class="font-bold text-base md:text-lg text-gray-800 dark:text-gray-100">BCA</h2>
                                     <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">Adrian Ibrahim Putra Wirahmat</p>
@@ -99,13 +98,18 @@
                             </div>
                             <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
                                 <span id="bca-number" class="text-sm md:text-base font-mono text-gray-700 dark:text-gray-200">7790440263</span>
-                                <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="bca-number" data-lang-key="copy">SALIN</button>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-1 rounded-md text-gray-500 dark:text-gray-400 opacity-50 cursor-not-allowed" disabled>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                                    </button>
+                                    <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="bca-number" data-lang-key="copy">SALIN</button>
+                                </div>
                             </div>
                         </div>
                         <!-- DANA -->
                         <div class="p-3 border border-gray-200 dark:border-gray-700 rounded-xl theme-transition flex flex-col justify-between">
                            <div class="flex items-start space-x-3 mb-2">
-                                <img src="img/dana.png" alt="Logo DANA" class="w-12 h-12 object-contain">
+                                <img src="img/dana.png" alt="Logo DANA" class="w-12 h-12 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/48x48/108EE9/FFFFFF?text=DANA';">
                                 <div>
                                     <h2 class="font-bold text-base md:text-lg text-gray-800 dark:text-gray-100">DANA</h2>
                                     <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">Adrian Ibrahim Putra Wirahmat</p>
@@ -113,13 +117,18 @@
                             </div>
                             <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
                                 <span id="dana-number" class="text-sm md:text-base font-mono text-gray-700 dark:text-gray-200">085826143635</span>
-                                <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="dana-number" data-lang-key="copy">SALIN</button>
+                                <div class="flex items-center space-x-1">
+                                    <button class="show-payment-qr-btn p-1 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600" data-qr-src="img/danaqr.jpeg" data-payment-name="DANA">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                                    </button>
+                                    <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="dana-number" data-lang-key="copy">SALIN</button>
+                                </div>
                             </div>
                         </div>
                         <!-- Gopay -->
                         <div class="p-3 border border-gray-200 dark:border-gray-700 rounded-xl theme-transition flex flex-col justify-between">
                             <div class="flex items-start space-x-3 mb-2">
-                                <img src="img/gopay.png" alt="Logo Gopay" class="w-12 h-12 object-contain">
+                                <img src="img/gopay.png" alt="Logo Gopay" class="w-12 h-12 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/48x48/00AEEF/FFFFFF?text=Go';">
                                 <div>
                                     <h2 class="font-bold text-base md:text-lg text-gray-800 dark:text-gray-100">Gopay</h2>
                                     <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">Adrian Ibrahim Putra Wirahmat</p>
@@ -127,13 +136,18 @@
                             </div>
                             <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
                                 <span id="gopay-number" class="text-sm md:text-base font-mono text-gray-700 dark:text-gray-200">085826143635</span>
-                                <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="gopay-number" data-lang-key="copy">SALIN</button>
+                                <div class="flex items-center space-x-1">
+                                    <button class="show-payment-qr-btn p-1 rounded-md text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600" data-qr-src="img/gopayqr.jpeg" data-payment-name="Gopay">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                                    </button>
+                                    <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="gopay-number" data-lang-key="copy">SALIN</button>
+                                </div>
                             </div>
                         </div>
                         <!-- Shopee Pay -->
                         <div class="p-3 border border-gray-200 dark:border-gray-700 rounded-xl theme-transition flex flex-col justify-between">
                             <div class="flex items-start space-x-3 mb-2">
-                                <img src="img/shopeepay.png" alt="Logo Shopee Pay" class="w-12 h-12 object-contain">
+                                <img src="img/shopeepay.png" alt="Logo Shopee Pay" class="w-12 h-12 object-contain" onerror="this.onerror=null;this.src='https://placehold.co/48x48/EE4D2D/FFFFFF?text=S';">
                                 <div>
                                     <h2 class="font-bold text-base md:text-lg text-gray-800 dark:text-gray-100">ShopeePay</h2>
                                     <p class="text-xs md:text-sm text-gray-500 dark:text-gray-400">Adrian Ibrahim Putra Wirahmat</p>
@@ -141,7 +155,12 @@
                             </div>
                             <div class="flex items-center justify-between bg-gray-100 dark:bg-gray-700 p-2 rounded-lg">
                                 <span id="shopee-number" class="text-sm md:text-base font-mono text-gray-700 dark:text-gray-200">085826143635</span>
-                                <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="shopee-number" data-lang-key="copy">SALIN</button>
+                                <div class="flex items-center space-x-1">
+                                    <button class="p-1 rounded-md text-gray-500 dark:text-gray-400 opacity-50 cursor-not-allowed" disabled>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect></svg>
+                                    </button>
+                                    <button class="copy-btn px-3 py-1 bg-gray-200 dark:bg-gray-600 text-gray-800 dark:text-gray-100 text-xs font-bold rounded-md hover:bg-gray-300 dark:hover:bg-gray-500" data-copy-target="shopee-number" data-lang-key="copy">SALIN</button>
+                                </div>
                             </div>
                         </div>
                         <!-- PayPal -->
@@ -202,11 +221,22 @@
             </button>
             <h3 class="font-bold text-lg text-gray-800 dark:text-gray-100 mb-1">QRIS</h3>
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-4" data-lang-key="qris_desc">Scan untuk membayar</p>
-            <img src="img\qris.jpeg" alt="Kode QRIS" class="w-full rounded-xl mx-auto">
-            <a href="img\qris.jpeg" download="QRIS-Pembayaran.png" class="mt-4 w-full flex items-center justify-center px-4 py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 theme-transition">
+            <img src="img/qris.jpeg" alt="Kode QRIS" class="w-full rounded-xl mx-auto" onerror="this.onerror=null;this.src='https://placehold.co/908x1280/FFFFFF/000000?text=QRIS+Not+Found';">
+            <a href="img/qris.jpeg" download="QRIS-Pembayaran.jpeg" class="mt-4 w-full flex items-center justify-center px-4 py-3 bg-green-600 text-white text-sm font-semibold rounded-lg hover:bg-green-700 theme-transition">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
                 <span data-lang-key="download_qr">Unduh QR</span>
             </a>
+        </div>
+    </div>
+
+    <!-- Generic Payment QR Modal -->
+    <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 hidden theme-transition z-50">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-sm text-center relative">
+            <button id="close-payment-modal-btn" class="absolute top-2 right-2 p-2 text-gray-500 hover:text-gray-800 dark:hover:text-gray-200">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+            <h3 id="modal-payment-title" class="font-bold text-lg text-gray-800 dark:text-gray-100 mb-4"></h3>
+            <img id="modal-payment-qr" src="" alt="Kode QR Pembayaran" class="w-full rounded-xl mx-auto aspect-square object-contain">
         </div>
     </div>
 
@@ -230,6 +260,13 @@
             // Modal Elements
             const qrisModal = document.getElementById('qris-modal');
             const closeModalBtn = document.getElementById('close-modal-btn');
+
+            // Generic Payment Modal Elements
+            const paymentModal = document.getElementById('payment-modal');
+            const closePaymentModalBtn = document.getElementById('close-payment-modal-btn');
+            const showPaymentQrBtns = document.querySelectorAll('.show-payment-qr-btn');
+            const modalPaymentTitle = document.getElementById('modal-payment-title');
+            const modalPaymentQr = document.getElementById('modal-payment-qr');
 
             // --- Translations Data ---
             const translations = {
@@ -358,15 +395,32 @@
             });
 
             // --- Modal Logic ---
-            const hideModal = () => {
-                qrisModal.classList.add('hidden');
-            };
+            const hideQrModal = () => qrisModal.classList.add('hidden');
+            const hidePaymentModal = () => paymentModal.classList.add('hidden');
 
-            closeModalBtn.addEventListener('click', hideModal);
+            closeModalBtn.addEventListener('click', hideQrModal);
             qrisModal.addEventListener('click', (event) => {
-                if (event.target === qrisModal) {
-                    hideModal();
-                }
+                if (event.target === qrisModal) hideQrModal();
+            });
+
+            closePaymentModalBtn.addEventListener('click', hidePaymentModal);
+            paymentModal.addEventListener('click', (event) => {
+                if (event.target === paymentModal) hidePaymentModal();
+            });
+
+            // --- Generic Payment QR Modal Logic ---
+            showPaymentQrBtns.forEach(button => {
+                button.addEventListener('click', () => {
+                    if (button.disabled) return;
+                    
+                    const qrSrc = button.dataset.qrSrc;
+                    const paymentName = button.dataset.paymentName;
+
+                    modalPaymentTitle.textContent = paymentName;
+                    modalPaymentQr.src = qrSrc;
+                    
+                    paymentModal.classList.remove('hidden');
+                });
             });
 
 
